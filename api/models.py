@@ -8,6 +8,6 @@ class ACCOUNT(models.Model):
     private_key = models.CharField(max_length=100,null=False)
     public_key = models.CharField(max_length=100,null=False)
     balance = models.CharField(max_length=100,null=False)
-    Wallet = xrpl.wallet.Wallet()
+    seed = models.CharField(max_length=100,null=True,default=None)
     def __str__(self) -> str:
         return str(self.wallet_address)
